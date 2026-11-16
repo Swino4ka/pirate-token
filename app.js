@@ -79,7 +79,6 @@ function save() {
   try {
     localStorage.setItem(key, JSON.stringify({stats, skipped: [...skipped], mode, custom: currentCustom, sound}));
   } catch {
-    // The current session can continue if browser storage is unavailable.
   }
 }
 

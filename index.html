@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101014">
-  <meta name="description" content="A fan-made Fortnite Treasure Hunters chest simulator. Open chests, track your drops and see when you get the Pirate Token.">
+  <meta name="description"
+    content="A fan-made Fortnite Treasure Hunters chest simulator. Open chests, track your drops and see when you get the Pirate Token.">
   <title>When Will You Get The Token</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +15,13 @@
   <script src="simulator.js" defer></script>
   <script src="app.js" defer></script>
 </head>
+
 <body>
   <header class="top">
     <div class="wrap top-inner">
       <a class="brand" href="#top"><span data-icon="token"></span> Treasure Hunters</a>
-      <button class="sound" id="sound" type="button" aria-pressed="false"><span data-icon="muted"></span><span id="sound-label">Sound off</span></button>
+      <button class="sound" id="sound" type="button" aria-pressed="false"><span data-icon="muted"></span><span
+          id="sound-label">Sound off</span></button>
     </div>
   </header>
   <main class="wrap" id="top">
@@ -31,11 +35,13 @@
       <div class="stat"><small>Pirate Token</small><strong id="token-total">Not found yet</strong></div>
     </section>
     <section class="opener" aria-label="Open treasure chests">
-      <img class="chest-cover" id="chest-cover" src="assets/chest-cover.png" alt="Fortnite treasure chest" width="1600" height="1440">
+      <img class="chest-cover" id="chest-cover" src="assets/chest-cover.png" alt="Fortnite treasure chest" width="1600"
+        height="1440">
       <div class="actions">
         <button id="open-one" class="action primary" type="button">Open Chest</button>
         <button id="open-hundred" class="action secondary" type="button">Open 100</button>
-        <button id="auto" class="action secondary" type="button"><span id="auto-icon" data-icon="play"></span><span id="auto-label">Auto-Open</span></button>
+        <button id="auto" class="action secondary" type="button"><span id="auto-icon" data-icon="play"></span><span
+            id="auto-label">Auto-Open</span></button>
       </div>
       <p id="result" class="result" role="status">Choose how many chests to open.</p>
     </section>
@@ -51,7 +57,8 @@
             <label><input type="radio" name="boost" value="custom"><span>Custom</span></label>
           </div>
           <p>Power Hour boosts all drop rates in this simulator.</p>
-          <label id="custom-control" class="custom-control" hidden>Custom multiplier <input id="custom" type="number" min="0.1" max="10000000" step="any" value="3" inputmode="decimal"> ×</label>
+          <label id="custom-control" class="custom-control" hidden>Custom multiplier <input id="custom" type="number"
+              min="0.1" max="10000000" step="any" value="3" inputmode="decimal"> ×</label>
         </fieldset>
         <fieldset id="filters" class="filters">
           <legend>Auto-open filters</legend>
@@ -66,12 +73,24 @@
       </div>
       <div class="table-scroll" tabindex="0" aria-label="Loot rates and stats">
         <table>
-          <thead><tr><th scope="col">REWARD</th><th scope="col">DROP CHANCE</th><th scope="col">FOUND</th><th scope="col">FIRST DROP</th></tr></thead>
+          <thead>
+            <tr>
+              <th scope="col">REWARD</th>
+              <th scope="col">DROP CHANCE</th>
+              <th scope="col">FOUND</th>
+              <th scope="col">FIRST DROP</th>
+            </tr>
+          </thead>
           <tbody id="loot-rows"></tbody>
         </table>
       </div>
     </section>
-    <footer><span>Unofficial Fortnite fan simulator.</span><div><a href="https://www.fortnite.com/news/fortnite-treasure-hunters-the-greatest-adventure-of-all-time" target="_blank" rel="noreferrer">Fortnite event ↗</a><a href="https://www.epicgames.com/help/c-34254770/c-33726977/a14361627" target="_blank" rel="noreferrer">Official drop rates ↗</a></div></footer>
+    <footer><span>Unofficial Fortnite fan simulator.</span>
+      <div><a href="https://www.fortnite.com/news/fortnite-treasure-hunters-the-greatest-adventure-of-all-time"
+          target="_blank" rel="noreferrer">Fortnite event ↗</a><a
+          href="https://www.epicgames.com/help/c-34254770/c-33726977/a14361627" target="_blank"
+          rel="noreferrer">Official drop rates ↗</a></div>
+    </footer>
   </main>
   <dialog id="loot-dialog" aria-labelledby="drop-title" aria-describedby="drop-summary">
     <form method="dialog">
@@ -84,6 +103,14 @@
       <div class="dialog-actions"><button class="action primary">Continue</button></div>
     </form>
   </dialog>
-  <dialog id="reset-dialog" aria-labelledby="reset-title"><form method="dialog"><h2 id="reset-title">Reset stats?</h2><p>This clears your chest count and all recorded drops.</p><div class="dialog-actions"><button class="action secondary" value="cancel" autofocus>Cancel</button><button class="action primary" value="reset">Reset stats</button></div></form></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title">
+    <form method="dialog">
+      <h2 id="reset-title">Reset stats?</h2>
+      <p>This clears your chest count and all recorded drops.</p>
+      <div class="dialog-actions"><button class="action secondary" value="cancel" autofocus>Cancel</button><button
+          class="action primary" value="reset">Reset stats</button></div>
+    </form>
+  </dialog>
 </body>
+
 </html>
